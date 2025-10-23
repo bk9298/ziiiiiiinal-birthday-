@@ -35,10 +35,20 @@
     </div> -->
 
     <!-- Audio tự động phát -->
-    <audio id="myAudio" autoplay playsinline>
-        <source src="music/setlove.mp3" type="audio/mpeg">
-        <source src="music/setlove.ogg" type="audio/ogg">
-    </audio>
+    <audio id="myAudio" autoplay muted playsinline>
+    <source src="music/setlove.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById("myAudio");
+    // unmute and play after short delay (bypasses browser restriction)
+    setTimeout(() => {
+      audio.muted = false;
+      audio.play().catch(err => console.log("Audio autoplay blocked:", err));
+    }, 1000);
+  });
+</script>
 
     <script src="main.js"></script>
 
