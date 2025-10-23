@@ -41,6 +41,14 @@
     <source src="music/setlove.mp3" type="audio/mpeg">
 </audio>
 -->
+    <script>
+document.addEventListener('click', () => {
+  const audio = document.querySelector('audio');
+  if (audio) {
+    audio.play().catch(err => console.log('Autoplay blocked:', err));
+  }
+}, { once: true });
+    </script>
 
     <script src="main.js"></script>
 
