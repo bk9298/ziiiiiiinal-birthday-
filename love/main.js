@@ -5,9 +5,9 @@ var rotateSpeed = -60; // unit: seconds/360 degrees
 var imgWidth = 120; // width of images (unit: px)
 var imgHeight = 170; // height of images (unit: px)
 
-// Disable SoundCloud background music
-var bgMusicURL = null;
-var bgMusicControls = false;
+// Use local background music for photo gallery
+var bgMusicURL = 'music/setlove.mp3';
+var bgMusicControls = false; // hide default controls
 
 
 
